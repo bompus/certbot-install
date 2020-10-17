@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Abort entire script if any command fails
+set -e
+
+# Abort if we try to access an undefined variable
+set -u
+
 ROOT=~/.certbot-src
 
 # Remove older versions if existing, for a simple re-install/update.
@@ -23,3 +29,6 @@ python3 tools/venv3.py
 
 # Link installed certbot version, so it can used everywhere.
 sudo ln -s $ROOT/venv3/bin/certbot /usr/local/bin/
+
+# clean up
+rm -rf $ROOT

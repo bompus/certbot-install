@@ -9,13 +9,13 @@ This makes Certbot work on Ubuntu 20.04 Focal. Probably for latest Debian as wel
 Run the following command with a sudoer:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/bompus/certbot-install/master/install.sh | bash
 ```
 
 ## How to Uninstall
 
 ```bash
-curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/uninstall.sh | bash
+curl -o- https://raw.githubusercontent.com/bompus/certbot-install/master/uninstall.sh | bash
 ```
 
 ## Why this instead of the official install?

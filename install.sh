@@ -28,6 +28,7 @@ sudo apt-get install -y python3-dev python3-venv gcc libaugeas0 libssl-dev libff
 python3 tools/venv3.py
 
 # Link installed certbot version, so it can used everywhere.
+rm -f /usr/local/bin/certbot
 sudo ln -s $ROOT/venv3/bin/certbot /usr/local/bin/
 
 # clean up

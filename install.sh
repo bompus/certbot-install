@@ -10,6 +10,7 @@ ROOT=~/.certbot-src
 
 # Remove older versions if existing, for a simple re-install/update.
 rm -rf $ROOT
+rm -f /usr/local/bin/certbot /usr/bin/certbot
 
 # Clone certbot source.
 git clone https://github.com/certbot/certbot $ROOT
@@ -28,8 +29,4 @@ sudo apt-get install -y python3-dev python3-venv gcc libaugeas0 libssl-dev libff
 python3 tools/venv3.py
 
 # Link installed certbot version, so it can used everywhere.
-rm -f /usr/local/bin/certbot /usr/bin/certbot
 sudo ln -s $ROOT/venv3/bin/certbot /usr/bin/
-
-# clean up
-rm -rf $ROOT
